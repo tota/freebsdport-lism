@@ -1,0 +1,29 @@
+@unexec if cmp -s %D/etc/lism.conf.sample %D/etc/lism.conf; then rm -f %D/etc/lism.conf; fi
+etc/lism.conf.sample
+@exec if [ ! -f %D/etc/lism.conf ] ; then cp -p %D/%F %B/lism.conf; fi
+sbin/lismcluster
+sbin/lismconfig
+sbin/lismsync
+%%SITE_PERL%%/LISM.pm
+%%SITE_PERL%%/LISM/Handler.pm
+%%SITE_PERL%%/LISM/Handler/Check.pm
+%%SITE_PERL%%/LISM/Handler/Rewrite.pm
+%%SITE_PERL%%/LISM/Handler/Script.pm
+%%SITE_PERL%%/LISM/Handler/Setval.pm
+%%SITE_PERL%%/LISM/Server.pm
+%%SITE_PERL%%/LISM/Storage.pm
+%%SITE_PERL%%/LISM/Storage/AD.pm
+%%SITE_PERL%%/LISM/Storage/CSV.pm
+%%SITE_PERL%%/LISM/Storage/GAE.pm
+%%SITE_PERL%%/LISM/Storage/GoogleApps.pm
+%%SITE_PERL%%/LISM/Storage/LDAP.pm
+%%SITE_PERL%%/LISM/Storage/SOAP.pm
+%%SITE_PERL%%/LISM/Storage/SQL.pm
+%%SITE_PERL%%/LISM/Utils/lism_plugin.pl
+%%SITE_PERL%%/LISM/Utils/lism_smb.pl
+%%SITE_PERL%%/LISM/Utils/lism_sugarcrm.pl
+%%SITE_PERL%%/LISM/Utils/lism_util.pl
+@dirrm %%SITE_PERL%%/LISM/Utils
+@dirrm %%SITE_PERL%%/LISM/Storage
+@dirrm %%SITE_PERL%%/LISM/Handler
+@dirrm %%SITE_PERL%%/LISM

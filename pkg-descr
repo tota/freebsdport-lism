@@ -1,0 +1,6 @@
+When you use several RDB, LDAP and the other system, you will have
+a hard time synchronizing their data. LISM(LDAP Identity Synchronization
+Manager) solves this problem. LISM eables to update the all systems
+to update LDAP server of LISM.
+
+WWW:	http://lism.sourceforge.jp/
